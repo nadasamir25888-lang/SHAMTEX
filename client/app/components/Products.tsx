@@ -40,9 +40,7 @@ export default function Products() {
 
   useEffect(() => {
     const loadProducts = async () => {
-      const apiUrl =
-        process.env.NEXT_PUBLIC_API_URL ||
-        "http://localhost:5000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
 
       setLoading(true);
       setError(null);

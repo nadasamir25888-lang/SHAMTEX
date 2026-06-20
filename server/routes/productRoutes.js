@@ -19,7 +19,8 @@ router.get("/:id", async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json(error);
+    console.error(error);
+    res.status(500).json({ message: error.message || "Server error" });
 
   }
 
@@ -38,7 +39,8 @@ router.get("/", async (req, res) => {
 
   } catch (error) {
 
-    res.status(500).json(error);
+    console.error(error);
+    res.status(500).json({ message: error.message || "Server error" });
 
   }
 

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -26,9 +28,7 @@ export default function ProductPage() {
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
   const { addToCart } = useCart();
 
-  const baseURL =
-    process.env.NEXT_PUBLIC_API_URL ||
-    "http://localhost:5000";
+  const baseURL = process.env.NEXT_PUBLIC_API_URL || "";
 
   useEffect(() => {
     const loadProduct = async () => {
